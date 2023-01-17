@@ -64,8 +64,8 @@ function GroupedTeamMember({
           <div className="col-8">
             <h1>Team Member allocation</h1>
             <h3>
-              {selectedTeam} has {teamMemberCount}{" "}
-              {teamMemberCount === 1 ? "Member" : "Members"}
+              {selectedTeam} has {teamMemberCount===0? null: teamMemberCount}{" "}
+              {teamMemberCount === 1 ? "Member" : teamMemberCount===0? "No members": "Members"}
             </h3>
           </div>
         </div>
