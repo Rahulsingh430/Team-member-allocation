@@ -1,11 +1,17 @@
-const TeamMember=({employees, handleclick, selectedTeam})=> {
-    return (
-         employees.map((employee)=>(
-            <TeamMemberCard handleclick={handleclick} selectedTeam={selectedTeam} />
-         ))
-          
-      
-    )
-  }
-  
-  export default TeamMember;
+import TeamMemberCard from "./TeamMemberCard";
+
+const TeamMember = ({ employees, selectedTeam, handleClick }) => {
+  return (
+    <div className="card-collection">
+      {employees.map((employee) => (
+        <TeamMemberCard
+          employee={employee}
+          handleClick={handleClick}
+          selectedTeam={selectedTeam}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default TeamMember;

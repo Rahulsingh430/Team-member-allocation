@@ -1,7 +1,7 @@
 import React from "react";
 import Team from "./Team";
-import femalepic from "./images/femaleProfile.jpg";
-import malepic from "./images/maleProfile.jpg";
+
+import TeamMember from "./TeamMember";
 
 const Employee = ({ employees, selectedTeam, handleChange, handleClick }) => {
   return (
@@ -13,7 +13,11 @@ const Employee = ({ employees, selectedTeam, handleChange, handleClick }) => {
       </div>
       <div className="row justify-content-center mt-3 mb-3">
         <div className="col-8">
-          
+          <TeamMember
+            employees={employees}
+            selectedTeam={selectedTeam}
+            handleClick={handleClick}
+          />
         </div>
       </div>
     </main>
